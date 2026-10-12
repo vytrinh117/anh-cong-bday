@@ -155,6 +155,13 @@
       const completed = isComplete(key);
       $('quest-' + key).classList.toggle('completed', completed);
       $('state-' + key).textContent = completed ? '✓ HOÀN THÀNH' : 'CHƯA HOÀN THÀNH';
+      // C2: One-way presentation sync; existing quest state remains authoritative.
+      const mapMarker = document.querySelector(`[data-realm="${key}"]`);
+      if (mapMarker) {
+        mapMarker.classList.toggle('is-complete', completed);
+        const mapStatus = $('map-state-' + key);
+        if (mapStatus) mapStatus.textContent = completed ? '✓ ĐÃ HOÀN THÀNH' : 'CHƯA HOÀN THÀNH';
+      }
       done += completed ? 1 : 0;
     });
     $('quest-count').textContent = String(done);
@@ -166,12 +173,22 @@
     lastCompleted = done;
     saveState();
   }
+  /* ---------- C2: Scenic map is navigation only; every destination always available. ---------- */
+  document.querySelectorAll('.realm-marker').forEach(marker => {
+    marker.addEventListener('click', () => {
+      document.querySelectorAll('.realm-marker').forEach(m => m.classList.remove('is-selected'));
+      marker.classList.add('is-selected');
+    });
+  });
   /* ---------- Nha Trang fishing ---------- */
   const fishNames = ['cá thu', 'cá hồng', 'cá nục', 'cá chim', 'cá mú'];
   $('fish-btn').addEventListener('click', () => {
     if (state.fish >= 2) return;
     const fishName = fishNames[Math.floor(Math.random() * fishNames.length)];
     state.fish++;
+    const water = document.querySelector('.coast-art');
+    if (water) { water.classList.remove('fish-caught'); void water.offsetWidth; water.classList.add('fish-caught'); }
+
     $('fish-count').textContent = String(Math.min(state.fish,2));
     $('fish-feedback').textContent = `✦ Anh câu được một con ${fishName}! Sóng biển vỗ tay cho anh.`;
     $('fish-btn').textContent = state.fish >= 2 ? 'Đã nhận đủ cá ✦' : 'Thả câu thêm lần nữa ↗';
@@ -220,6 +237,8 @@
       btn.setAttribute('aria-pressed', String(active));
       btn.disabled = active;
     });
+    const observatory = document.querySelector('.server-art');
+    if (observatory) observatory.dataset.online = String(Object.values(state.nodes).filter(Boolean).length);
     const total = Object.values(state.nodes).filter(Boolean).length;
     $('terminal-result').textContent = total === 3 ? '✓ birthday_cluster: ONLINE ♥' : `active nodes: ${total}/3 _`;
     $('cluster-feedback').textContent = total === 3 ? '✦ Cụm máy sinh nhật đã hoạt động. Đang lưu những điều thật đẹp...' : `Đã kết nối ${total}/3 tinh tú. Hãy kích hoạt toàn bộ.`;

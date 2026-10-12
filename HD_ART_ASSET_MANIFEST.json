@@ -1,0 +1,173 @@
+{
+  "version": "C2-HD-ART-1",
+  "date": "2026-10-12",
+  "authoritative_baseline": "HAC_HAI_KY_SU_2_0_C2_WEBSITE_GITHUB_PAGES.zip",
+  "note": "Source AI PNGs 1672x941; deployed WebPs are carefully resampled to 1920x1080, which does NOT add native generated detail. One intentionally cropped portrait mobile hero. Bob placeholder remains vector SVG, independent of raster resolution.",
+  "assets": [
+    {
+      "file": "assets/cinematic/hero-desktop.webp",
+      "native_png": "đêm_trăng_huyền_ảo_bên_vịnh_tiên_cảnh.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [
+        "horizontal mirror for hero layout"
+      ],
+      "upscaled": true,
+      "bytes": 563914,
+      "sha256": "76d6591196092f0bca455aeffd99a41702ce5da6898ee6b772721f44eb8a7219"
+    },
+    {
+      "file": "assets/cinematic/world-map.webp",
+      "native_png": "vương_quốc_huyền_ảo_dưới_ánh_trăng.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 806336,
+      "sha256": "1dda774a049d2e0be13dcf046af3315d2551032e2e2c84bcc3a794560cb86f98"
+    },
+    {
+      "file": "assets/cinematic/nha-trang-coast.webp",
+      "native_png": "vịnh_trăng_vàng_huyền_ảo_việt_nam.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 736268,
+      "sha256": "85d2f4fd76b99264a02297a264e7008cdbb09a4b1187dfe566230f10c538b080"
+    },
+    {
+      "file": "assets/cinematic/peanut-garden.webp",
+      "native_png": "vườn_đậu_phộng_dưới_trăng_vàng.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 869740,
+      "sha256": "8cb641bf292122600b300179528ddda1ca748c6a942b7b88cae787efce6f5027"
+    },
+    {
+      "file": "assets/cinematic/hpc-observatory.webp",
+      "native_png": "đài_quan_sát_thiên_hà_huyền_ảo.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 893046,
+      "sha256": "a16624204485f321a52fe1bad7a849f74f9c1fda9a9780f4bf8909f94e3053ae"
+    },
+    {
+      "file": "assets/cinematic/ancient-library.webp",
+      "native_png": "thư_viện_đế_quốc_dưới_ánh_trăng.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 779424,
+      "sha256": "6ba51e91fe72c1824f83ad81f485c1a518f0bd789042d70f5d97e7f3b7ec32d6"
+    },
+    {
+      "file": "assets/cinematic/artist-workshop.webp",
+      "native_png": "xưởng_họa_đêm_trăng_bên_vịnh_huyền_ảo.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 643612,
+      "sha256": "1f7ac5c8868db00e277d8651831cd6f7e677a73164724bdd3cdf74930baf95f5"
+    },
+    {
+      "file": "assets/cinematic/memory-room.webp",
+      "native_png": "sân_hiên_ký_ức_dưới_ánh_trăng.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 660420,
+      "sha256": "8436885607f905ddf7fb9e245b4c1f08b4f9128d763f11c4aca4736dd68cc335"
+    },
+    {
+      "file": "assets/cinematic/letter-finale.webp",
+      "native_png": "cảnh_trăng_huyền_ảo_trên_biển_mây.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        1920,
+        1080
+      ],
+      "processing": [],
+      "upscaled": true,
+      "bytes": 526806,
+      "sha256": "3989cdeceb76846963c45d5cccdf24507ade4ba92598f4ed73de54526c3afc47"
+    },
+    {
+      "file": "assets/cinematic/hero-mobile.webp",
+      "native_png": "đêm_trăng_huyền_ảo_bên_vịnh_tiên_cảnh.png",
+      "native_dimensions": [
+        1672,
+        941
+      ],
+      "web_dimensions": [
+        900,
+        1400
+      ],
+      "processing": [
+        "horizontal mirror",
+        "mobile composition crop and resampling"
+      ],
+      "upscaled": true,
+      "bytes": 305566,
+      "sha256": "f068f12822c7d2be046176e1a9f9bd3b531aaadd52ba1504a4f69083437f7afe"
+    }
+  ]
+}

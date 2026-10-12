@@ -76,3 +76,17 @@ Tiến trình trò chơi được lưu vào `localStorage` trên thiết bị đ
 - Phần lớn hình minh họa là SVG vẽ riêng nằm trong `assets`; không phụ thuộc ảnh bên ngoài. Font dùng Google Fonts, nếu mất mạng trình duyệt dùng font dự phòng.
 - Không tự phát nhạc khi chưa có người dùng bấm.
 - Mọi thứ chạy tĩnh; không có biểu mẫu thu dữ liệu hay chức năng lưu lời nhắn của người xem lên máy chủ.
+
+
+## Hắc Hải Ký Sự 2.0 — C2: Vạn Giới Đồ & Tứ Cảnh Kỳ Duyên
+
+- Bản đồ `#realm-map` gồm bốn điểm đến HTML có thể nhấn, nối tới bốn nhiệm vụ có sẵn (không yêu cầu mở khóa).
+- Trạng thái hoàn thành trên bản đồ dùng chung `updateQuestProgress()` và dữ liệu lưu đã có, không thêm storage key.
+- Ảnh cinematic C2: `assets/cinematic/world-map.webp`, `nha-trang-coast.webp`, `peanut-garden.webp`, `hpc-observatory.webp`, `ancient-library.webp`. Tất cả đều được đóng gói sẵn, không cần CDN ảnh.
+- Mở `index.html` qua GitHub Pages hoặc static HTTP server, không cần build step.
+- Trên mobile, bản đồ tự chuyển thành các điểm đến dạng dọc dễ bấm; có hỗ trợ giảm chuyển động trong tùy chọn hệ thống.
+- Các quest, lịch sử lưu `birthday-for-cong-v1`, thư, vẽ và nhạc giữ nguyên từ C1.
+
+
+## C2-HD artwork update (2026-10-12)
+All nine immersive background illustrations use separate scenes in `assets/cinematic/` as 1920×1080 WebP, with a separate 900×1400 mobile hero. The native generated masters were 1672×941, and were high-quality resampled; the images are not true 4K. The website remains a static GitHub Pages project; copy the ZIP **contents** to the repository root, not the parent folder. Existing gameplay files and localStorage schema are unchanged. The separately provided QA ZIP includes screenshots, asset manifest, and a test report.

@@ -20,7 +20,7 @@
   <div class="cinematic-intro" id="cinematic-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title" hidden>
     <picture class="intro-scene" aria-hidden="true">
       <source media="(max-width: 640px)" srcset="assets/cinematic/hero-mobile.webp" type="image/webp">
-      <img src="assets/cinematic/hero-desktop.webp" alt="" width="1672" height="941" decoding="async">
+      <img src="assets/cinematic/hero-desktop.webp" alt="" width="1920" height="1080" decoding="async">
     </picture>
     <div class="intro-shroud" aria-hidden="true"></div>
     <div class="intro-content">
@@ -49,7 +49,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <picture class="hero-scene" aria-hidden="true">
         <source media="(max-width: 640px)" srcset="assets/cinematic/hero-mobile.webp" type="image/webp">
-        <img src="assets/cinematic/hero-desktop.webp" alt="" width="1672" height="941" decoding="async" fetchpriority="high">
+        <img src="assets/cinematic/hero-desktop.webp" alt="" width="1920" height="1080" decoding="async" fetchpriority="high">
       </picture>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-inner content-width">
@@ -81,25 +81,41 @@
       <div class="content-width">
         <div class="chapter-label"><span>01</span><span class="label-bar"></span><span>GIANG HỒ CHỜ ANH</span></div>
         <div class="section-heading heading-with-side"><div><p class="tiny-gold">BẢN ĐỒ KỲ DUYÊN</p><h2>Bốn cánh cổng.<br><span class="serif-italic">Một cuộc phiêu lưu.</span></h2></div><div class="quest-progress"><span class="quest-progress-legend">NHIỆM VỤ ĐÃ HOÀN THÀNH</span><div class="quest-progress-numbers"><strong id="quest-count">0</strong><span>/ 04</span></div><div class="progress-track"><span id="quest-progress-fill"></span></div><p>Không cần vội. Giang hồ này đợi anh.</p></div></div>
+        <div class="realm-introduction" id="realm-introduction">
+          <div><span class="realm-kicker">CHƯƠNG 01 / VẠN GIỚI ĐỒ</span><h3>Bốn phương kỳ duyên</h3><p>Mỗi vùng đất giữ một điều anh yêu. Chọn một địa điểm trên bản đồ để bước vào thử thách — tất cả đều mở sẵn.</p></div>
+          <span class="realm-compass" aria-hidden="true">✧<small>山 · 海 · 緣</small></span>
+        </div>
+        <div class="realm-map" id="realm-map" role="region" aria-label="Bản đồ tương tác bốn địa điểm">
+          <div class="realm-map-backdrop" aria-hidden="true"></div>
+          <div class="realm-map-shade" aria-hidden="true"></div>
+          <svg class="realm-connections" aria-hidden="true" viewBox="0 0 1000 650" preserveAspectRatio="none"><path class="realm-trail" d="M165 280 C260 90 550 80 720 195 S690 460 400 495 S615 590 812 495"/><path class="realm-trail-glow" d="M165 280 C260 90 550 80 720 195 S690 460 400 495 S615 590 812 495"/></svg>
+          <div class="realm-map-heading"><span>萬界圖 <small>WORLD OF WONDERS</small></span><p>Chạm vào một địa điểm để dịch chuyển</p></div>
+          <a class="realm-marker realm-marker-coast" href="#quest-coast" data-realm="coast" aria-label="Đến Hải Vực Nha Trang, câu cá"><span class="realm-marker-icon" aria-hidden="true">≈</span><span class="realm-marker-info"><b>01 · HẢI VỰC NHA TRANG</b><small>Câu cá bên biển đêm</small><em id="map-state-coast">CHƯA HOÀN THÀNH</em></span></a>
+          <a class="realm-marker realm-marker-farm" href="#quest-farm" data-realm="farm" aria-label="Đến Linh Điền Đậu Phộng, gieo trồng"><span class="realm-marker-icon" aria-hidden="true">❋</span><span class="realm-marker-info"><b>02 · LINH ĐIỀN ĐẬU PHỘNG</b><small>Gieo hạt, tưới, thu hoạch</small><em id="map-state-farm">CHƯA HOÀN THÀNH</em></span></a>
+          <a class="realm-marker realm-marker-cluster" href="#quest-cluster" data-realm="cluster" aria-label="Đến Thiên Cơ Đại Trận, kích hoạt HPC"><span class="realm-marker-icon" aria-hidden="true">⌘</span><span class="realm-marker-info"><b>03 · THIÊN CƠ ĐẠI TRẬN</b><small>Compute · Network · Lustre</small><em id="map-state-cluster">CHƯA HOÀN THÀNH</em></span></a>
+          <a class="realm-marker realm-marker-quiz" href="#quest-quiz" data-realm="quiz" aria-label="Đến Tàng Kinh Các, thử thách tri thức"><span class="realm-marker-icon" aria-hidden="true">冊</span><span class="realm-marker-info"><b>04 · TÀNG KINH CÁC</b><small>Lịch sử · Địa lý · Toán học</small><em id="map-state-quiz">CHƯA HOÀN THÀNH</em></span></a>
+          <div class="realm-map-footer" aria-hidden="true"><span>✦ TỨ CẢNH KỲ DUYÊN ✦</span><span>KHÔNG CÓ NHIỆM VỤ BỊ KHÓA</span></div>
+        </div>
+        <div class="realm-chapter-title" id="four-scenes"><div><span>CHƯƠNG 02 / TỨ CẢNH KỲ DUYÊN</span><h3>Bắt đầu hành trình</h3></div><p>Chọn thử thách theo ý anh, không cần làm theo thứ tự.</p></div>
         <div class="quest-grid">
           <article class="quest-card coast-card" id="quest-coast">
             <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅰ</span><span class="quest-state" id="state-coast">CHƯA HOÀN THÀNH</span></div>
-            <div class="coast-art" role="img" aria-label="Tranh minh họa vịnh biển Nha Trang dưới trăng"><span class="art-caption">NHA TRANG · KHÁNH HÒA</span><img id="nha-trang-photo" alt="Hình Nha Trang do bạn thêm" hidden></div>
+            <div class="coast-art" role="img" aria-label="Hải vực Nha Trang dưới trăng, biển và thuyền"><span class="sea-ripple" aria-hidden="true"></span><span class="scene-overline" aria-hidden="true">HẢI VỰC · NHA TRANG</span><span class="art-caption">NHA TRANG · KHÁNH HÒA</span><img id="nha-trang-photo" alt="Hình Nha Trang do bạn thêm" hidden></div>
             <div class="quest-body"><div class="quest-icon">≈</div><h3>Bến gió Nha Trang</h3><p>Trở về miền biển anh yêu. Thả câu một chút, biết đâu có cá ngon cho bữa tối?</p><div class="quest-reward"><span>CHIẾN LỢI PHẨM</span><strong><span aria-hidden="true">✧</span> Cá biển: <span id="fish-count">0</span>/2</strong></div><button type="button" class="btn btn-outline full-btn" id="fish-btn">Thả câu bên bờ biển <span aria-hidden="true">↗</span></button><p class="action-feedback" id="fish-feedback" aria-live="polite">Biển đang yên, cá đang chờ...</p></div>
           </article>
           <article class="quest-card farm-card" id="quest-farm">
             <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅱ</span><span class="quest-state" id="state-farm">CHƯA HOÀN THÀNH</span></div>
-            <div class="farm-art"><span class="farm-art-sun"></span><span class="farm-hill hill-one"></span><span class="farm-hill hill-two"></span><span class="art-caption">MỘT NÔNG TRẠI · NHIỀU ĐIỀU BẤT NGỜ</span><div class="farm-plots" id="farm-plots" aria-label="Bốn luống trồng đậu phộng"></div></div>
+            <div class="farm-art"><span class="scene-overline" aria-hidden="true">LINH ĐIỀN · TỊNH CỐC</span><span class="farm-art-sun"></span><span class="farm-hill hill-one"></span><span class="farm-hill hill-two"></span><span class="art-caption">MỘT NÔNG TRẠI · NHIỀU ĐIỀU BẤT NGỜ</span><div class="farm-plots" id="farm-plots" aria-label="Bốn luống trồng đậu phộng"></div></div>
             <div class="quest-body"><div class="quest-icon">❋</div><h3>Nông trại kỳ duyên</h3><p>Ở đây trồng đậu phộng cũng như làm nhiệm vụ RPG: chạm luống đất để <b>gieo → tưới → thu hoạch.</b></p><div class="quest-reward"><span>CHIẾN LỢI PHẨM</span><strong>Đậu phộng: <span id="peanut-count">0</span>/2 <span aria-hidden="true">✦</span></strong></div><p class="action-feedback farm-hint" id="farm-feedback" aria-live="polite">Nhấn một luống đất để bắt đầu.</p></div>
           </article>
           <article class="quest-card server-card" id="quest-cluster">
             <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅲ</span><span class="quest-state" id="state-cluster">CHƯA HOÀN THÀNH</span></div>
-            <div class="server-art"><div class="server-stars" aria-hidden="true">· ✧ · · ✦ · · ✧</div><div class="server-terminal"><div class="terminal-title"><span class="terminal-lights"><i></i><i></i><i></i></span><span>birthday-cluster ~</span><span class="terminal-wave">⌁</span></div><div class="terminal-screen"><div><span class="terminal-green">➜</span> initializing celebration...</div><div><span class="terminal-blue">➜</span> lustre.mount(<span class="terminal-yellow">"memories"</span>)</div><div id="terminal-result" class="terminal-output">waiting for 3 nodes_</div></div></div></div>
+            <div class="server-art"><span class="scene-overline" aria-hidden="true">THIÊN CƠ · THIÊN VĂN ĐÀI</span><div class="node-light-bridge" aria-hidden="true"><i></i><i></i><i></i></div><div class="server-stars" aria-hidden="true">· ✧ · · ✦ · · ✧</div><div class="server-terminal"><div class="terminal-title"><span class="terminal-lights"><i></i><i></i><i></i></span><span>birthday-cluster ~</span><span class="terminal-wave">⌁</span></div><div class="terminal-screen"><div><span class="terminal-green">➜</span> initializing celebration...</div><div><span class="terminal-blue">➜</span> lustre.mount(<span class="terminal-yellow">"memories"</span>)</div><div id="terminal-result" class="terminal-output">waiting for 3 nodes_</div></div></div></div>
             <div class="quest-body"><div class="quest-icon">⌘</div><h3>Thiên cơ · HPC</h3><p>Hợp nhất ba tinh tú để kích hoạt siêu máy chủ sinh nhật. Bộ nhớ lưu trữ: vô hạn điều đáng nhớ.</p><div class="cluster-nodes" role="group" aria-label="Bật ba thành phần HPC"><button type="button" class="node-btn" data-node="compute" aria-pressed="false"><span>◈</span> Compute</button><button type="button" class="node-btn" data-node="lustre" aria-pressed="false"><span>▤</span> Lustre</button><button type="button" class="node-btn" data-node="network" aria-pressed="false"><span>⌁</span> Network</button></div><p class="action-feedback" id="cluster-feedback" aria-live="polite">Đang chờ kết nối các node.</p></div>
           </article>
           <article class="quest-card quiz-card" id="quest-quiz">
             <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅳ</span><span class="quest-state" id="state-quiz">CHƯA HOÀN THÀNH</span></div>
-            <div class="quiz-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="quiz-core">智</div><div class="orbit-star star-one">✦</div><div class="orbit-star star-two">✶</div><div class="orbit-star star-three">✧</div><span class="art-caption">THIÊN VĂN · TOÁN · TRI THỨC</span></div>
+            <div class="quiz-art"><span class="scene-overline" aria-hidden="true">TÀNG KINH CÁC · TRI THỨC</span><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="quiz-core">智</div><div class="orbit-star star-one">✦</div><div class="orbit-star star-two">✶</div><div class="orbit-star star-three">✧</div><span class="art-caption">THIÊN VĂN · TOÁN · TRI THỨC</span></div>
             <div class="quest-body"><div class="quest-icon">✧</div><h3>Học viện vạn sự</h3><p>Một thử thách nhỏ cho người có cả kho kiến thức về toán, lịch sử và địa lý.</p><div id="quiz-game" class="quiz-game"><span class="quiz-counter" id="quiz-counter">CÂU 01 / 03</span><h4 id="quiz-question">Đang tải câu hỏi...</h4><div id="quiz-options" class="quiz-options"></div><p id="quiz-feedback" class="action-feedback" aria-live="polite"></p></div></div>
           </article>
         </div>

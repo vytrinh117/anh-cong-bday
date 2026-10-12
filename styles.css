@@ -115,3 +115,128 @@ html{overflow-x:clip}
 /* C1 mobile polish: expose the birthday message and primary CTA sooner. */
 @media (max-width:640px){.hero{justify-content:flex-start}.hero-copy{padding-top:325px}}
 @media (max-width:380px){.hero-copy{padding-top:305px}}
+
+
+/* ================================================================
+   C2 — VẠN GIỚI ĐỒ / TỨ CẢNH KỲ DUYÊN
+   Additive scenery, HTML map targets; no gameplay/save-key changes.
+   ================================================================ */
+#quests{background:linear-gradient(180deg,#080e14 0%,#0b151b 34%,#080f14 100%);position:relative}
+.realm-introduction{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:10px 0 22px}
+.realm-kicker,.realm-chapter-title span{font-size:10px;letter-spacing:.23em;color:#d2ba85}
+.realm-introduction h3,.realm-chapter-title h3{font:400 clamp(28px,3vw,41px)/1.27 var(--serif);margin:8px 0;color:#f5e9d6}
+.realm-introduction p,.realm-chapter-title p{font-size:12px;color:#bdc9c8;line-height:1.9;max-width:640px;margin:0}
+.realm-compass{display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #816e49;border-radius:50%;width:93px;height:93px;flex-shrink:0;font:40px/1 var(--serif);color:#dbc692;box-shadow:inset 0 0 28px #d1a76316,0 0 35px #e1c38712;transform:rotate(8deg)}
+.realm-compass small{font:9px/2 var(--sans);letter-spacing:.12em}
+.realm-map{position:relative;height:640px;isolation:isolate;overflow:hidden;border:1px solid rgba(210,179,116,.51);background:#07131d;box-shadow:0 24px 68px #01080cb3,0 0 0 5px #c3a26a13,inset 0 0 75px #000;contain:paint}
+.realm-map::after{content:'';position:absolute;z-index:0;inset:8px;border:1px solid rgba(216,185,126,.25);pointer-events:none}
+.realm-map-backdrop{position:absolute;inset:0;background:url('assets/cinematic/world-map.webp') center center/cover no-repeat;transform:scale(1.008)}
+.realm-map-shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 21%,rgba(3,11,17,.38) 77%),linear-gradient(180deg,rgba(2,9,15,.47),rgba(4,11,18,.15) 26%,rgba(4,11,17,.05) 60%,rgba(4,10,16,.65) 100%);pointer-events:none}
+.realm-map-heading{position:absolute;z-index:3;left:37px;top:28px;padding:10px 17px;background:rgba(5,12,19,.78);border-left:2px solid #d3b37a;backdrop-filter:blur(5px);pointer-events:none}
+.realm-map-heading>span{font:32px/1.2 Georgia,serif;color:#e9d7ac;letter-spacing:.12em}
+.realm-map-heading small{display:block;font:9px var(--sans);letter-spacing:.23em;color:#abbfba;margin-top:4px}
+.realm-map-heading p{font-size:10px;color:#d8dfd6;margin:7px 0 0}
+.realm-connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;filter:drop-shadow(0 0 6px #e4bd75a9)}
+.realm-trail{stroke:rgba(7,18,25,.72);stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:1 15}
+.realm-trail-glow{stroke:#d8ba86;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-dasharray:3 13;animation:realmTrail 22s linear infinite}
+@keyframes realmTrail{to{stroke-dashoffset:-280}}
+.realm-marker{--side:min(270px,27%);position:absolute;display:flex;align-items:center;gap:12px;z-index:4;min-height:75px;max-width:280px;padding:10px 14px 10px 11px;background:linear-gradient(110deg,rgba(6,14,20,.95),rgba(7,18,24,.83));border:1px solid rgba(218,185,123,.49);box-shadow:0 12px 23px rgba(1,6,8,.75);transition:border-color .18s,background .18s,transform .18s,box-shadow .18s;backdrop-filter:blur(7px)}
+.realm-marker:hover,.realm-marker:focus-visible,.realm-marker.is-selected{border-color:#fae0a0;background:#172d34;transform:translateY(-4px);box-shadow:0 0 20px rgba(216,186,129,.28),0 12px 35px #000b}
+.realm-marker-icon{width:47px;height:47px;min-width:47px;border:1px solid #c3a774;border-radius:50%;display:grid;place-items:center;background:#122a2a;color:#ebd39e;font:28px var(--serif);box-shadow:0 0 0 4px #be9f702a,0 0 22px #c9b07c22}
+.realm-marker-info{display:flex;flex-direction:column;gap:3px;min-width:0}
+.realm-marker-info b{font:11px/1.4 var(--serif);color:#f3e3c4;letter-spacing:.065em}
+.realm-marker-info small{font:10px/1.4 var(--sans);color:#bbc9c5}
+.realm-marker-info em{font:9px/1.3 var(--sans);font-style:normal;letter-spacing:.07em;color:#cbbba2;margin-top:2px}
+.realm-marker.is-complete .realm-marker-icon{border-color:#9dd2a7;color:#c4f2c5;background:#264a40;box-shadow:0 0 18px #75d7a55c}
+.realm-marker.is-complete .realm-marker-info em{color:#b2ecb9}
+.realm-marker-coast{left:6%;top:35%}.realm-marker-farm{right:6%;top:27%}.realm-marker-cluster{left:14%;bottom:15%}.realm-marker-quiz{right:6%;bottom:12%}
+.realm-map-footer{position:absolute;z-index:3;bottom:11px;left:22px;right:22px;display:flex;justify-content:space-between;gap:15px;pointer-events:none;color:#dac294;font:9px/1.5 var(--sans);letter-spacing:.16em;text-shadow:0 2px 6px #000}
+.realm-chapter-title{margin:60px 0 21px;display:flex;justify-content:space-between;align-items:end;gap:16px}
+.realm-chapter-title p{max-width:330px;text-align:right}
+/* Original game cards now open as large illustrated chapter scenes */
+#quests .quest-grid{gap:30px}
+#quests .quest-card{background:#0d1a21;border:1px solid rgba(204,175,121,.26);box-shadow:0 16px 32px #03080cb3;position:relative;scroll-margin-top:22px}
+#quests .quest-card.completed{border-color:rgba(136,192,144,.58)}
+#quests .quest-topline{background:#0a141b;border-bottom:1px solid rgba(207,180,126,.18);z-index:3;position:relative}
+#quests .coast-art,#quests .farm-art,#quests .server-art,#quests .quiz-art{height:300px;isolation:isolate;position:relative;overflow:hidden;background-position:center;background-size:cover}
+#quests .coast-art{background-image:linear-gradient(180deg,transparent 38%,rgba(2,13,20,.35)),url('assets/cinematic/nha-trang-coast.webp')}
+#quests .farm-art{background-image:linear-gradient(180deg,rgba(5,12,15,.05),rgba(3,12,16,.38) 76%,rgba(3,12,16,.68)),url('assets/cinematic/peanut-garden.webp');background-position:center 40%}
+#quests .server-art{background-image:linear-gradient(180deg,rgba(3,11,20,.04),rgba(2,8,16,.60) 100%),url('assets/cinematic/hpc-observatory.webp');background-position:center 55%;padding:0}
+#quests .quiz-art{background-image:linear-gradient(180deg,rgba(3,7,13,.0),rgba(4,10,16,.56)),url('assets/cinematic/ancient-library.webp');background-position:center 45%}
+#quests .coast-art::after,#quests .farm-art::after,#quests .server-art::after,#quests .quiz-art::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 66px #02091088;pointer-events:none;z-index:1}
+#quests .scene-overline{position:absolute;z-index:5;top:17px;left:21px;font:9px var(--sans);letter-spacing:.18em;color:#f5dba4;text-shadow:0 2px 7px #000;background:#0510169e;padding:6px 12px;border:1px solid #d8b77966}
+#quests .art-caption{position:absolute;z-index:5}
+#quests .farm-hill,#quests .farm-art-sun{display:none}
+#quests .farm-plots{position:absolute;z-index:6;left:0;right:0;bottom:17px;top:auto;transform:none;display:flex;gap:13px;justify-content:center;align-items:center;max-width:100%;padding:0 14px}
+#quests .farm-plot{background:linear-gradient(160deg,#5b4b33,#31251d);border:2px solid #d9b579;box-shadow:0 9px 18px #000b,0 0 14px #d2ac6333;position:relative;width:72px;height:61px;flex:0 1 72px;border-radius:11px;color:#fff0c9}
+#quests .farm-plot:hover{transform:translateY(-5px)}
+#quests .farm-plot[data-stage="1"]{background:#325747}#quests .farm-plot[data-stage="2"]{background:#37785d}
+#quests .server-stars{display:none}
+#quests .server-terminal{position:absolute;z-index:5;left:18px;bottom:15px;width:min(440px,calc(100% - 36px));height:auto;max-height:135px;background:rgba(5,14,20,.84);backdrop-filter:blur(6px);border:1px solid rgba(125,195,206,.62);box-shadow:0 10px 38px #000c}
+#quests .terminal-screen{padding:6px 13px;line-height:1.45;font-size:10px}
+#quests .terminal-title{height:25px}
+#quests .node-light-bridge{position:absolute;z-index:2;inset:15% 14% 32%;border:1px solid rgba(92,194,245,.22);border-radius:50%;box-shadow:0 0 40px #4d9ad236;pointer-events:none;animation:nodeAura 6s ease-in-out infinite}
+#quests .node-light-bridge i{position:absolute;width:10px;height:10px;border-radius:50%;background:#88d7ff;box-shadow:0 0 24px #81d9ff,0 0 40px #3c9fff;top:30%;left:50%}
+#quests .node-light-bridge i:nth-child(2){left:10%;top:80%}#quests .node-light-bridge i:nth-child(3){left:87%;top:80%}
+#quests .server-art[data-online="3"] .node-light-bridge{border-color:#9ae7c9;box-shadow:0 0 35px #51e2a977}
+@keyframes nodeAura{50%{opacity:.58;transform:scale(.96)}}
+#quests .quiz-art .orbit,#quests .quiz-art .orbit-star,#quests .quiz-art .quiz-core{display:none}
+#quests .coast-art .sea-ripple{position:absolute;z-index:3;right:38%;bottom:18%;width:70px;height:25px;border:2px solid rgba(144,217,234,.9);border-radius:50%;opacity:0;pointer-events:none}
+#quests .coast-art.fish-caught .sea-ripple{animation:catchRipple .9s ease-out forwards}
+@keyframes catchRipple{0%{transform:scale(.35);opacity:1}100%{transform:scale(3.5);opacity:0}}
+#quests .quest-body{background:linear-gradient(160deg,#0e1b22,#102027 68%,#0a171d)}
+#quests .quest-body .quest-icon{color:#e1c088}
+#quests .node-btn{min-height:63px;border-color:#466469}
+#quests .node-btn[aria-pressed="true"]{border-color:#8ccd9b;box-shadow:0 0 16px #97d3ad25}
+#quests .quiz-game{background:#081821cf;border-color:#9b81563b}
+@media(max-width:1050px){.realm-marker{max-width:240px}.realm-marker-info b{font-size:10px}.realm-marker-info small{font-size:9px}.realm-map{height:590px}}
+@media(max-width:800px){.realm-map{height:585px}.realm-marker{gap:7px;padding:8px;max-width:213px}.realm-marker-icon{height:38px;width:38px;min-width:38px;font-size:23px}.realm-marker-coast{left:4%;top:31%}.realm-marker-farm{right:3%;top:31%}.realm-marker-cluster{left:4%;bottom:15%}.realm-marker-quiz{right:3%;bottom:15%}#quests .quest-grid{gap:19px}#quests .quest-card .quest-body{padding:25px}}
+@media(max-width:640px){
+  .realm-introduction{align-items:start;gap:12px}.realm-compass{height:65px;width:65px;font-size:28px}.realm-compass small{font-size:6px}
+  .realm-map{height:auto;min-height:0;display:grid;gap:11px;padding:122px 15px 49px;contain:initial}
+  .realm-map-backdrop{background-image:linear-gradient(180deg,rgba(5,14,20,.66),rgba(5,13,20,.65)),url('assets/cinematic/world-map.webp');background-position:center;background-size:cover}
+  .realm-connections{display:none}.realm-map-heading{left:23px;top:21px;padding:6px 12px}.realm-map-heading>span{font-size:23px}.realm-map-heading p{font-size:9px}
+  .realm-marker{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;max-width:none;min-height:89px;padding:12px 13px;transform:none!important;gap:14px;border-color:#d8bb8055}
+  .realm-marker:nth-of-type(odd){margin-left:0}.realm-marker-info b{font-size:11px}.realm-marker-info small{font-size:10px}.realm-marker-icon{width:49px;min-width:49px;height:49px;font-size:28px}
+  .realm-map-footer{bottom:12px;left:18px;right:18px;font-size:8px}.realm-map-footer span:last-child{display:none}
+  .realm-chapter-title{margin:55px 0 20px;display:block}.realm-chapter-title h3{margin:8px 0}.realm-chapter-title p{text-align:left}
+  #quests .coast-art,#quests .farm-art,#quests .server-art,#quests .quiz-art{height:235px}
+  #quests .quest-grid{grid-template-columns:1fr;gap:22px}
+  #quests .farm-plot{height:55px;width:60px;flex-basis:60px}
+  #quests .server-terminal{max-height:133px}#quests .scene-overline{font-size:8px}
+}
+@media(max-width:360px){.realm-marker-info b{font-size:10px}.realm-marker-info small{font-size:9px}.realm-introduction h3{font-size:27px}.realm-map-footer{letter-spacing:.07em}#quests .farm-plots{gap:6px}}
+@media(prefers-reduced-motion:reduce){.realm-trail-glow,.node-light-bridge,.coast-art.fish-caught .sea-ripple{animation:none!important}.coast-art.fish-caught .sea-ripple{opacity:.4;transform:scale(1)}}
+
+
+/* ==================================================================
+   HD ART MASTER UPGRADE 2026-10-12 — C2-approved gameplay untouched
+   Nine independently generated scenes, full-frame 1920x1080 WebP;
+   mobile hero has its own portrait composition. Text remains HTML.
+   ================================================================== */
+/* The original C2 environment views above automatically use the new
+   full-frame HD assets because their asset paths are unchanged. */
+.atelier-section {
+  background:linear-gradient(180deg,rgba(4,10,15,.75),rgba(4,11,15,.86) 58%,rgba(4,10,15,.92)),
+             url('assets/cinematic/artist-workshop.webp') center 48%/cover no-repeat;
+}
+.atelier-section .sketch-card,.atelier-section .print-card{background:rgba(9,19,24,.91);backdrop-filter:blur(3px)}
+.memory-section {
+  background:linear-gradient(90deg,rgba(4,10,15,.79),rgba(5,12,17,.80)),
+             url('assets/cinematic/memory-room.webp') center 50%/cover no-repeat;
+}
+.interlude {
+  background:linear-gradient(90deg,rgba(5,10,16,.73),rgba(5,12,17,.72)),
+             url('assets/cinematic/memory-room.webp') center 50%/cover no-repeat;
+}
+.letter-section {
+  background:linear-gradient(180deg,rgba(5,10,16,.77),rgba(5,12,17,.88) 55%,#080f15 100%),
+             url('assets/cinematic/letter-finale.webp') center 40%/cover no-repeat;
+}
+@media (max-width:640px) {
+  .atelier-section{background-position:center top}
+  .memory-section{background-position:54% 50%;background-image:linear-gradient(rgba(4,10,15,.86),rgba(5,12,17,.9)),url('assets/cinematic/memory-room.webp')}
+  .letter-section{background-position:65% 0%;background-image:linear-gradient(rgba(4,9,15,.84),rgba(5,12,17,.9)),url('assets/cinematic/letter-finale.webp')}
+  .interlude{background-attachment:scroll;background-position:65% center}
+}
+@media (prefers-reduced-motion:reduce){.hero-scene img,.intro-scene img{animation:none!important}}

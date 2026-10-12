@@ -16,6 +16,26 @@
 </head>
 <body>
   <a href="#main" class="skip-link">Bỏ qua menu, vào nội dung</a>
+  <!-- C1: An accessible, skippable cinematic prologue; original game remains intact. -->
+  <div class="cinematic-intro" id="cinematic-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title" hidden>
+    <picture class="intro-scene" aria-hidden="true">
+      <source media="(max-width: 640px)" srcset="assets/cinematic/hero-mobile.webp" type="image/webp">
+      <img src="assets/cinematic/hero-desktop.webp" alt="" width="1672" height="941" decoding="async">
+    </picture>
+    <div class="intro-shroud" aria-hidden="true"></div>
+    <div class="intro-content">
+      <p class="intro-kicker">HẮC HẢI KÝ SỰ <span aria-hidden="true">✦</span> THIÊN MÔN KHAI MỞ</p>
+      <span class="intro-glyph" aria-hidden="true">山 · 海 · 月</span>
+      <h2 id="intro-title">Giữa muôn trùng sơn hải,<br><em>hôm nay giang hồ này dành cho anh.</em></h2>
+      <p class="intro-dedication">Chúc mừng sinh nhật anh <span id="intro-person">Công</span>.</p>
+      <div class="intro-actions">
+        <button class="btn btn-gold intro-enter" id="intro-enter" type="button">Bước vào giang hồ <span aria-hidden="true">↗</span></button>
+        <button class="intro-skip" id="intro-skip" type="button">Bỏ qua lời dẫn</button>
+      </div>
+      <p class="intro-muted-note">Trải nghiệm không tự bật âm thanh.</p>
+    </div>
+    <div class="intro-ornament" aria-hidden="true"><span>✦</span><span></span><span>✦</span></div>
+  </div>
   <div class="reading-progress" aria-hidden="true"><span id="reading-progress-fill"></span></div>
   <header class="site-header" id="top">
     <a href="#top" class="brand" aria-label="Về đầu trang"><span class="brand-mark">✦</span><span>HẮC HẢI <em>KÝ SỰ</em></span></a>
@@ -27,6 +47,10 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-scene" aria-hidden="true">
+        <source media="(max-width: 640px)" srcset="assets/cinematic/hero-mobile.webp" type="image/webp">
+        <img src="assets/cinematic/hero-desktop.webp" alt="" width="1672" height="941" decoding="async" fetchpriority="high">
+      </picture>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-inner content-width">
         <div class="hero-copy reveal-on-scroll">
@@ -34,7 +58,7 @@
           <div class="hero-chinese" aria-hidden="true">生 日 快 樂</div>
           <h1 id="hero-title">Giữa muôn trùng<br><i>sơn hải,</i><br>chúc mừng sinh nhật <span class="gold-word" id="hero-name">anh Công.</span></h1>
           <p class="hero-description">Nếu mỗi người có một giang hồ của riêng mình, thì đây là thế giới em muốn dành tặng anh — có biển, có núi, có những trò anh yêu, và một chút thương từ em.</p>
-          <div class="hero-buttons"><a class="btn btn-gold" href="#quests"><span>Khởi hành vào giang hồ</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#letter">Đọc lời em gửi <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-buttons"><a class="btn btn-gold" href="#quests"><span>Khởi hành vào giang hồ</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#letter">Đọc lời em gửi <span aria-hidden="true">↗</span></a><button id="replay-intro" class="replay-intro" type="button">Xem lại mở đầu ✧</button></div>
           <div class="hero-signature"><span class="signature-symbol">✧</span><span>Một câu chuyện nhỏ. Một nhân vật chính duy nhất.</span></div>
         </div>
         <div class="hero-seal" aria-label="Thiệp sinh nhật dành riêng cho anh Công">

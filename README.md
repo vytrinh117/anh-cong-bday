@@ -2,6 +2,21 @@
 
 Một website sinh nhật cá nhân được thiết kế theo chủ đề **tiên hiệp Trung Hoa × đen/vàng đồng × biển Nha Trang**, có 4 mini-game và mật thư cuối hành trình. Không cần cài đặt framework, npm hoặc máy chủ backend.
 
+## C1 · Cinematic Xianxia Hero (2026-10-12)
+
+Website gốc đã được nâng cấp **chỉ ở cảnh mở đầu và hero**:
+
+- `assets/cinematic/hero-desktop.webp`: phong cảnh tiên hiệp điện ảnh độ phân giải 1672×941, có biển/đảo núi, trăng và công trình Trung Hoa cổ.
+- `assets/cinematic/hero-mobile.webp`: phối cảnh dành cho màn hình dọc, giúp phần chữ HTML dễ đọc hơn.
+- Lần đầu mở trong một phiên tab, cảnh **Thiên Môn Khai Mở** hiện ra. Bấm **Bước vào giang hồ**, **Bỏ qua lời dẫn** hoặc phím `Escape` để đóng. Có nút **Xem lại mở đầu** trên trang chính.
+- Nhạc vẫn **không tự phát**; toàn bộ câu chữ/nút được viết bằng HTML và có thể truy cập bàn phím.
+- Giao diện chuyển động dịu (camera chậm và lớp khói/ánh sáng tĩnh). Khi người dùng bật giảm chuyển động, hiệu ứng motion được tắt.
+- Mini-game, `config.js`, thư, canvas, âm thanh và khóa lưu nhiệm vụ `birthday-for-cong-v1` vẫn giữ như phiên bản gốc.
+- Việc đã xem intro được lưu **riêng trong `sessionStorage`** dưới khóa `hac-hai-ky-su-cinematic-intro-v1`; không làm thay đổi dữ liệu nhiệm vụ. Muốn xem lại có thể dùng nút trong hero.
+- Hình ảnh nhân vật và chó pug chỉ là cảnh fantasy được AI sáng tác, **không phải ảnh thật của anh Công hay Bob**. Muốn chèn ảnh thật về Bob, sử dụng `bobPhoto` trong `config.js`.
+
+Phạm vi chỉ đến **C1 — chờ bạn duyệt giao diện**. Bản đồ kỳ duyên và bốn mini-game bên dưới vẫn giữ bố cục cũ; các scene này thuộc C2 trở đi, chưa chỉnh sửa.
+
 ## Mở thử
 
 Mở `index.html` bằng Chrome, Edge hoặc Firefox. Nhạc nền mặc định tắt; nhấn nút **Bật âm thanh** nếu muốn nghe giai điệu tạo trực tiếp bằng trình duyệt.
@@ -29,7 +44,10 @@ styles.css
 script.js
 config.js
 assets/
-  hero-landscape.svg
+  hero-landscape.svg  # minh họa dự phòng từ phiên bản gốc
+  cinematic/
+    hero-desktop.webp
+    hero-mobile.webp
   coast.svg
   bob-pug.svg
   favicon.svg

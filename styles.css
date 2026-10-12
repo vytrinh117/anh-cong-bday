@@ -34,3 +34,84 @@
 [hidden]{display:none!important}
 
 html{overflow-x:clip}
+
+
+/* ==============================================================
+   HẮC HẢI KÝ SỰ 2.0 — C1 CINEMATIC HERO (additive / no game changes)
+   All wording and UI remain real HTML, not baked into the artwork.
+   ============================================================== */
+.hero{background-color:#050a10;background-position:center}
+.hero-scene,.intro-scene{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:hidden;pointer-events:none}
+.hero-scene{z-index:0}
+.hero-scene img,.intro-scene img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 47%}
+.hero-scene img{animation:heroBreath 24s ease-in-out infinite alternate;transform-origin:40% 50%}
+.hero::before{z-index:1;background:linear-gradient(90deg,rgba(4,8,13,.12) 0%,rgba(3,8,13,.2) 35%,rgba(3,7,12,.76) 64%,rgba(4,8,12,.88) 100%),linear-gradient(0deg,#060b10 0%,rgba(4,8,13,.17) 31%,rgba(3,8,13,.04) 65%,rgba(2,6,10,.28) 100%)}
+.hero-grain{z-index:2;opacity:.11}
+.hero-inner{z-index:3;display:flex;justify-content:flex-end;align-items:center}
+.hero-copy{width:min(610px,53%);padding:132px 0 106px}
+.hero h1{font-size:clamp(42px,4.9vw,71px);letter-spacing:-.045em;line-height:1.16;text-shadow:0 3px 30px #02070d}
+.hero h1 i,.hero .gold-word{color:#e6c990}
+.hero-description{max-width:540px;color:#e0e1d9;text-shadow:0 3px 19px #02060a}
+.hero-bottom{z-index:3}
+.hero-seal{z-index:4;right:auto;left:18px;bottom:15%;background:rgba(4,10,16,.31);backdrop-filter:blur(3px)}
+.hero-buttons{gap:16px 21px}
+.hero-buttons .btn{min-height:53px}
+.replay-intro{border:0;background:transparent;color:#d4bb89;padding:9px 0;font-size:11px;font-family:inherit;letter-spacing:.025em;text-underline-offset:5px;cursor:pointer;transition:color .2s}
+.replay-intro:hover,.replay-intro:focus-visible{color:#fff2d5;text-decoration:underline}
+@keyframes heroBreath{from{transform:scale(1.01) translate3d(0,0,0)}to{transform:scale(1.055) translate3d(-.5%,.35%,0)}}
+/* Skippable opening */
+.cinematic-intro{position:fixed;inset:0;z-index:200;isolation:isolate;display:flex;align-items:center;justify-content:center;text-align:center;background:#030810;overflow:hidden;color:#f3ecdb}
+.cinematic-intro[hidden]{display:none!important}
+.intro-scene{z-index:-2;animation:introReveal 1.6s ease-out both}
+.intro-scene img{animation:heroBreath 24s ease-in-out infinite alternate}
+.intro-shroud{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(3,8,13,.27),rgba(3,8,14,.55) 34%,rgba(3,7,13,.84) 73%,rgba(3,8,12,.94))}
+.intro-content{padding:72px 24px;max-width:min(860px,96vw);position:relative;z-index:1;animation:introTextAppear 1.05s .2s both}
+.intro-kicker{font-size:10px;letter-spacing:.34em;font-weight:600;color:#d9bd83;text-shadow:0 2px 12px #000}
+.intro-kicker span{margin:0 11px}
+.intro-glyph{display:block;margin:30px 0 14px;color:#e5c993;font:italic 15px Georgia,serif;letter-spacing:.8em}
+.intro-content h2{font:normal clamp(29px,4.4vw,66px)/1.27 var(--serif);letter-spacing:-.04em;text-wrap:balance;color:#faf1de;text-shadow:0 4px 29px #000}
+.intro-content h2 em{font-weight:400;color:#e9c995}
+.intro-dedication{font:normal clamp(17px,2vw,24px)/1.7 var(--serif);color:#f9edd6;margin:20px 0 30px;letter-spacing:.02em}
+.intro-dedication span{color:#eecb8a}
+.intro-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.intro-enter{min-height:52px;min-width:223px;cursor:pointer}
+.intro-skip{padding:13px 10px;border:0;border-bottom:1px solid rgba(226,207,170,.35);color:#f2e4c9;background:none;font:inherit;font-size:11px;cursor:pointer}
+.intro-skip:hover{color:white;border-bottom-color:#eed39f}
+.intro-muted-note{color:#abb5b3;font-size:10px;margin-top:28px}
+.intro-ornament{position:absolute;bottom:29px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:13px;color:#d8b474}
+.intro-ornament span:nth-child(2){height:1px;width:94px;background:linear-gradient(90deg,transparent,#c9ac74,transparent)}
+.intro-is-open{overflow:hidden}
+.cinematic-intro.intro-closing{opacity:0;pointer-events:none;transition:opacity .38s ease-out}
+@keyframes introReveal{from{opacity:.3;transform:scale(1.07);filter:brightness(.35)}to{opacity:1;transform:scale(1);filter:brightness(1)}}
+@keyframes introTextAppear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media (max-width:1100px){.hero-copy{width:min(575px,56%)}.hero-seal{display:none}.hero h1{font-size:clamp(42px,5.1vw,62px)}}
+@media (max-width:800px){.hero-inner{justify-content:flex-end}.hero-copy{width:min(530px,68%)}.hero::before{background:linear-gradient(90deg,rgba(3,8,13,.07),rgba(3,8,13,.63) 39%,rgba(2,7,12,.93) 100%),linear-gradient(0deg,#060c11,transparent 36%)}.hero-seal{display:none}.hero h1{font-size:clamp(39px,6vw,55px)}}
+@media (max-width:640px){
+ .hero{min-height:850px;height:auto;max-height:none;background-position:center top}
+ .hero-scene img,.intro-scene img{object-position:center top}
+ .hero-scene img{animation:none}
+ .hero::before{background:linear-gradient(180deg,rgba(2,7,11,.04) 0%,rgba(3,8,13,.25) 28%,rgba(3,8,13,.88) 45%,rgba(3,8,13,.96) 83%,#070d13 100%)}
+ .hero-inner{display:block}
+ .hero-copy{width:100%;padding:405px 0 112px}
+ .hero h1{font-size:clamp(37px,9.1vw,54px);line-height:1.2}
+ .hero-description{font-size:12px;line-height:1.9}
+ .hero-buttons{gap:13px 17px}
+ .hero-buttons .btn{min-height:48px}
+ .hero-signature{margin-top:30px}
+ .hero-bottom{bottom:20px}
+ .eyebrow{letter-spacing:.12em}
+ .intro-content{padding:32px 23px 58px}
+ .intro-content h2{font-size:clamp(27px,7vw,42px);line-height:1.35}
+ .intro-glyph{margin:14px 0 18px}
+ .intro-dedication{font-size:19px;margin:18px 0 25px}
+ .intro-kicker{font-size:9px;letter-spacing:.13em}
+ .intro-actions{flex-direction:column;gap:8px}
+ .intro-enter{width:100%;max-width:310px}
+ .intro-scene img{animation:none}
+ .intro-shroud{background:linear-gradient(180deg,rgba(3,8,14,.24),rgba(3,8,14,.64) 26%,rgba(3,8,14,.92) 55%,#040a10 90%)}
+}
+@media (max-width:380px){.hero-copy{padding-top:330px}.hero h1{font-size:37px}.intro-content h2{font-size:27px}}
+@media (prefers-reduced-motion:reduce){.hero-scene img,.intro-scene,.intro-scene img,.intro-content{animation:none!important}.cinematic-intro.intro-closing{transition:none!important}}
+/* C1 mobile polish: expose the birthday message and primary CTA sooner. */
+@media (max-width:640px){.hero{justify-content:flex-start}.hero-copy{padding-top:325px}}
+@media (max-width:380px){.hero-copy{padding-top:305px}}

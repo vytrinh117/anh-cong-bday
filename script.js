@@ -31,6 +31,7 @@
   /* ---------- Easy personalization through config.js ---------- */
   const person = String(CONFIG.boyfriendName || 'Công').trim();
   $('hero-name').textContent = `anh ${person}.`;
+  $('intro-person').textContent = person;
   $('envelope-name').textContent = person;
   $('footer-name').textContent = person.toLocaleUpperCase('vi-VN');
   document.title = `Gửi anh ${person} — Một giang hồ chỉ dành cho anh`;
@@ -62,6 +63,59 @@
     img.onload = () => $('letter-paragraphs').after(img);
     img.src = CONFIG.couplePhoto;
   }
+
+  /* ---------- C1 cinematic prologue: UI only; quest/save model unchanged ---------- */
+  const intro = $('cinematic-intro');
+  const introSeenKey = 'hac-hai-ky-su-cinematic-intro-v1';
+  let introClosing = false;
+  let previousIntroFocus = null;
+  function openCinematicIntro() {
+    if (!intro || !intro.hidden) return;
+    previousIntroFocus = document.activeElement;
+    introClosing = false;
+    intro.hidden = false;
+    intro.classList.remove('intro-closing');
+    document.documentElement.classList.add('intro-is-open');
+    $('main').inert = true;
+    document.querySelector('.site-header').inert = true;
+    $('intro-enter').focus({preventScroll: true});
+  }
+  function closeCinematicIntro() {
+    if (!intro || intro.hidden || introClosing) return;
+    introClosing = true;
+    intro.classList.add('intro-closing');
+    try { sessionStorage.setItem(introSeenKey, '1'); } catch (_) {}
+    // Restore interaction immediately; the short visual dissolve is non-blocking.
+    $('main').inert = false;
+    document.querySelector('.site-header').inert = false;
+    document.documentElement.classList.remove('intro-is-open');
+    setTimeout(() => {
+      intro.hidden = true;
+      intro.classList.remove('intro-closing');
+      introClosing = false;
+      if (previousIntroFocus && previousIntroFocus.isConnected && previousIntroFocus !== document.body) {
+        previousIntroFocus.focus({preventScroll:true});
+      } else {
+        const heroCta = document.querySelector('.hero-buttons .btn');
+        if (heroCta) heroCta.focus({preventScroll:true});
+      }
+    }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 390);
+  }
+  $('intro-enter').addEventListener('click', closeCinematicIntro);
+  $('intro-skip').addEventListener('click', closeCinematicIntro);
+  $('replay-intro').addEventListener('click', openCinematicIntro);
+  intro.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {e.preventDefault(); closeCinematicIntro();return;}
+    // Modal focus loop, including keyboard users.
+    if (e.key === 'Tab') {
+      const first = $('intro-enter'), last = $('intro-skip');
+      if (e.shiftKey && document.activeElement === first) {e.preventDefault();last.focus();}
+      else if (!e.shiftKey && document.activeElement === last) {e.preventDefault();first.focus();}
+    }
+  });
+  let introWasSeen = false;
+  try { introWasSeen = sessionStorage.getItem(introSeenKey) === '1'; } catch (_) {}
+  if (!introWasSeen) openCinematicIntro();
 
   /* ---------- UI ---------- */
   $('menu-btn').addEventListener('click', () => {

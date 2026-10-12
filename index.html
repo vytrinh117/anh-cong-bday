@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1016">
+  <meta name="description" content="Một thế giới sinh nhật nho nhỏ dành riêng cho anh Công: tiên hiệp, biển Nha Trang, nông trại, HPC và những điều em thương.">
+  <title>Gửi anh Công — Một giang hồ chỉ dành cho anh</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Bỏ qua menu, vào nội dung</a>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress-fill"></span></div>
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="Về đầu trang"><span class="brand-mark">✦</span><span>HẮC HẢI <em>KÝ SỰ</em></span></a>
+    <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
+      <a href="#prologue">Lời mở đầu</a><a href="#quests">Giang hồ</a><a href="#atelier">Thế giới của anh</a><a href="#letter">Mật thư</a>
+    </nav>
+    <div class="header-actions"><button id="sound-btn" class="sound-btn" type="button" aria-pressed="false" title="Bật / tắt nhạc nền"><span aria-hidden="true">♫</span><span class="sound-label">Bật âm thanh</span></button><button id="menu-btn" class="menu-btn" aria-label="Mở menu" aria-expanded="false" aria-controls="main-nav" type="button"><span></span><span></span><span></span></button></div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-inner content-width">
+        <div class="hero-copy reveal-on-scroll">
+          <div class="eyebrow"><span class="eyebrow-line"></span> MỘT THIÊN TRUYỆN CHỈ DÀNH CHO ANH <span class="eyebrow-line"></span></div>
+          <div class="hero-chinese" aria-hidden="true">生 日 快 樂</div>
+          <h1 id="hero-title">Giữa muôn trùng<br><i>sơn hải,</i><br>chúc mừng sinh nhật <span class="gold-word" id="hero-name">anh Công.</span></h1>
+          <p class="hero-description">Nếu mỗi người có một giang hồ của riêng mình, thì đây là thế giới em muốn dành tặng anh — có biển, có núi, có những trò anh yêu, và một chút thương từ em.</p>
+          <div class="hero-buttons"><a class="btn btn-gold" href="#quests"><span>Khởi hành vào giang hồ</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#letter">Đọc lời em gửi <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-signature"><span class="signature-symbol">✧</span><span>Một câu chuyện nhỏ. Một nhân vật chính duy nhất.</span></div>
+        </div>
+        <div class="hero-seal" aria-label="Thiệp sinh nhật dành riêng cho anh Công">
+          <div class="hero-seal-inner"><span class="seal-top">CHƯƠNG ĐẶC BIỆT</span><span class="seal-glyph">壽</span><span class="seal-bottom">HAPPY BIRTHDAY</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom content-width"><span>CUỘN ĐỂ KHÁM PHÁ</span><span class="scroll-line" aria-hidden="true"></span><span class="hero-coordinate">NHA TRANG ✦ GIANG HỒ ✦ VÔ HẠN</span></div>
+    </section>
+
+    <section id="prologue" class="prologue section-pad content-width reveal-on-scroll">
+      <div class="chapter-label"><span>00</span><span class="label-bar"></span><span>LỜI MỞ ĐẦU</span></div>
+      <div class="prologue-grid">
+        <div><p class="tiny-gold">Một nhân vật không giống ai</p><h2>Một người thích <span class="serif-italic">rất nhiều thế giới.</span></h2></div>
+        <div class="prologue-text"><p>Có những người chọn một thế giới để sống. Còn anh thì dường như muốn tìm hiểu tất cả: từ phim Hà Nhân, tiên sơn kỳ ảo, võ lâm Cửu Long Tranh Bá, một nông trại pha RPG… đến HPC, Lustre, lịch sử, địa lý, toán học và những ý tưởng được vẽ ra rồi in thành hình.</p><p>Em không thể tạo nên toàn bộ vũ trụ ấy, nhưng em có thể dựng một góc nhỏ dành riêng cho anh.</p><span class="small-signature">— Một món quà được làm bằng sự tò mò và thương yêu.</span></div>
+      </div>
+      <div class="ornament-line"><span>✺</span></div>
+    </section>
+
+    <section id="quests" class="quests-section section-pad">
+      <div class="content-width">
+        <div class="chapter-label"><span>01</span><span class="label-bar"></span><span>GIANG HỒ CHỜ ANH</span></div>
+        <div class="section-heading heading-with-side"><div><p class="tiny-gold">BẢN ĐỒ KỲ DUYÊN</p><h2>Bốn cánh cổng.<br><span class="serif-italic">Một cuộc phiêu lưu.</span></h2></div><div class="quest-progress"><span class="quest-progress-legend">NHIỆM VỤ ĐÃ HOÀN THÀNH</span><div class="quest-progress-numbers"><strong id="quest-count">0</strong><span>/ 04</span></div><div class="progress-track"><span id="quest-progress-fill"></span></div><p>Không cần vội. Giang hồ này đợi anh.</p></div></div>
+        <div class="quest-grid">
+          <article class="quest-card coast-card" id="quest-coast">
+            <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅰ</span><span class="quest-state" id="state-coast">CHƯA HOÀN THÀNH</span></div>
+            <div class="coast-art" role="img" aria-label="Tranh minh họa vịnh biển Nha Trang dưới trăng"><span class="art-caption">NHA TRANG · KHÁNH HÒA</span><img id="nha-trang-photo" alt="Hình Nha Trang do bạn thêm" hidden></div>
+            <div class="quest-body"><div class="quest-icon">≈</div><h3>Bến gió Nha Trang</h3><p>Trở về miền biển anh yêu. Thả câu một chút, biết đâu có cá ngon cho bữa tối?</p><div class="quest-reward"><span>CHIẾN LỢI PHẨM</span><strong><span aria-hidden="true">✧</span> Cá biển: <span id="fish-count">0</span>/2</strong></div><button type="button" class="btn btn-outline full-btn" id="fish-btn">Thả câu bên bờ biển <span aria-hidden="true">↗</span></button><p class="action-feedback" id="fish-feedback" aria-live="polite">Biển đang yên, cá đang chờ...</p></div>
+          </article>
+          <article class="quest-card farm-card" id="quest-farm">
+            <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅱ</span><span class="quest-state" id="state-farm">CHƯA HOÀN THÀNH</span></div>
+            <div class="farm-art"><span class="farm-art-sun"></span><span class="farm-hill hill-one"></span><span class="farm-hill hill-two"></span><span class="art-caption">MỘT NÔNG TRẠI · NHIỀU ĐIỀU BẤT NGỜ</span><div class="farm-plots" id="farm-plots" aria-label="Bốn luống trồng đậu phộng"></div></div>
+            <div class="quest-body"><div class="quest-icon">❋</div><h3>Nông trại kỳ duyên</h3><p>Ở đây trồng đậu phộng cũng như làm nhiệm vụ RPG: chạm luống đất để <b>gieo → tưới → thu hoạch.</b></p><div class="quest-reward"><span>CHIẾN LỢI PHẨM</span><strong>Đậu phộng: <span id="peanut-count">0</span>/2 <span aria-hidden="true">✦</span></strong></div><p class="action-feedback farm-hint" id="farm-feedback" aria-live="polite">Nhấn một luống đất để bắt đầu.</p></div>
+          </article>
+          <article class="quest-card server-card" id="quest-cluster">
+            <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅲ</span><span class="quest-state" id="state-cluster">CHƯA HOÀN THÀNH</span></div>
+            <div class="server-art"><div class="server-stars" aria-hidden="true">· ✧ · · ✦ · · ✧</div><div class="server-terminal"><div class="terminal-title"><span class="terminal-lights"><i></i><i></i><i></i></span><span>birthday-cluster ~</span><span class="terminal-wave">⌁</span></div><div class="terminal-screen"><div><span class="terminal-green">➜</span> initializing celebration...</div><div><span class="terminal-blue">➜</span> lustre.mount(<span class="terminal-yellow">"memories"</span>)</div><div id="terminal-result" class="terminal-output">waiting for 3 nodes_</div></div></div></div>
+            <div class="quest-body"><div class="quest-icon">⌘</div><h3>Thiên cơ · HPC</h3><p>Hợp nhất ba tinh tú để kích hoạt siêu máy chủ sinh nhật. Bộ nhớ lưu trữ: vô hạn điều đáng nhớ.</p><div class="cluster-nodes" role="group" aria-label="Bật ba thành phần HPC"><button type="button" class="node-btn" data-node="compute" aria-pressed="false"><span>◈</span> Compute</button><button type="button" class="node-btn" data-node="lustre" aria-pressed="false"><span>▤</span> Lustre</button><button type="button" class="node-btn" data-node="network" aria-pressed="false"><span>⌁</span> Network</button></div><p class="action-feedback" id="cluster-feedback" aria-live="polite">Đang chờ kết nối các node.</p></div>
+          </article>
+          <article class="quest-card quiz-card" id="quest-quiz">
+            <div class="quest-topline"><span class="quest-number">CỬA ẢI Ⅳ</span><span class="quest-state" id="state-quiz">CHƯA HOÀN THÀNH</span></div>
+            <div class="quiz-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="quiz-core">智</div><div class="orbit-star star-one">✦</div><div class="orbit-star star-two">✶</div><div class="orbit-star star-three">✧</div><span class="art-caption">THIÊN VĂN · TOÁN · TRI THỨC</span></div>
+            <div class="quest-body"><div class="quest-icon">✧</div><h3>Học viện vạn sự</h3><p>Một thử thách nhỏ cho người có cả kho kiến thức về toán, lịch sử và địa lý.</p><div id="quiz-game" class="quiz-game"><span class="quiz-counter" id="quiz-counter">CÂU 01 / 03</span><h4 id="quiz-question">Đang tải câu hỏi...</h4><div id="quiz-options" class="quiz-options"></div><p id="quiz-feedback" class="action-feedback" aria-live="polite"></p></div></div>
+          </article>
+        </div>
+        <div class="completion-banner" id="completion-banner" hidden><span class="completion-sparkle">✦</span><div><strong>Tứ cảnh đã khai mở!</strong><p>Anh đã hoàn thành cả bốn nhiệm vụ. Mật thư của em đang đợi anh ở cuối hành trình.</p></div><a href="#letter" class="btn btn-gold">Đến mật thư ↗</a></div>
+      </div>
+    </section>
+
+    <section id="atelier" class="atelier-section section-pad">
+      <div class="content-width">
+        <div class="chapter-label"><span>02</span><span class="label-bar"></span><span>NHỮNG ĐIỀU LÀM NÊN ANH</span></div>
+        <div class="atelier-heading"><p class="tiny-gold">GIỮA ĐỜI THƯỜNG VÀ TIÊN CẢNH</p><h2>Những điều nhỏ,<br><span class="serif-italic">đẹp theo cách của anh.</span></h2></div>
+        <div class="atelier-grid">
+          <article class="sketch-card"><div class="atelier-card-top"><span>01 / XƯỞNG SÁNG TẠO</span><span class="card-symbol">✎</span></div><div class="sketch-heading"><h3>Vẽ một chút gì đó nhé?</h3><p>Một khung vẽ nhỏ dành cho người thích biến ý tưởng thành hình dạng.</p></div><div class="drawing-wrap"><canvas id="drawing-canvas" width="900" height="340" aria-label="Khung vẽ tự do bằng chuột hoặc chạm tay"></canvas><span class="canvas-watermark" aria-hidden="true">YOUR NEXT IDEA STARTS HERE ✦</span></div><div class="drawing-tools"><span class="tools-label">MỰC VẼ</span><button class="color-swatch active" type="button" data-color="#d8bc86" style="--swatch:#d8bc86" aria-label="Màu vàng đồng" aria-pressed="true"></button><button class="color-swatch" type="button" data-color="#eff4ed" style="--swatch:#eff4ed" aria-label="Màu trắng" aria-pressed="false"></button><button class="color-swatch" type="button" data-color="#86b7ac" style="--swatch:#86b7ac" aria-label="Màu xanh ngọc" aria-pressed="false"></button><span class="tool-spacer"></span><button class="small-tool" id="clear-canvas" type="button">Xóa bảng</button><button class="small-tool primary-tool" id="save-canvas" type="button">Lưu tranh ↓</button></div></article>
+          <div class="atelier-side"><article class="print-card"><div class="atelier-card-top"><span>02 / MÁY IN GIẤC MƠ</span><span class="card-symbol">✧</span></div><div class="printer-display" aria-label="Khối lập phương 3D xoay minh họa in 3D"><div class="cube-scene"><div class="cube"><div class="face front"></div><div class="face back"></div><div class="face right"></div><div class="face left"></div><div class="face top"></div><div class="face bottom"></div></div></div><div class="printer-grid"></div></div><h3>Từ nét vẽ đến hình hài.</h3><p>Ý tưởng của anh không chỉ nằm trên giấy. Có những điều anh thật sự tạo được bằng đôi tay mình.</p><span class="mini-tag">3D PRINTING • CREATE • REPEAT</span></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory-section section-pad" id="memory">
+      <div class="content-width"><div class="chapter-label"><span>03</span><span class="label-bar"></span><span>MỘT GÓC NHỎ TRONG TIM</span></div>
+        <div class="memory-grid"><div class="bob-frame"><img id="bob-illustration" src="assets/bob-pug.svg" alt="Minh họa chú chó pug dễ thương gợi nhớ Bob"><img id="bob-photo" alt="Ảnh chú chó Bob" hidden><span class="frame-corner corner-a">✧</span><span class="frame-corner corner-b">✧</span><div class="photo-stamp">BOB <span>♡</span></div></div><div class="memory-copy"><p class="tiny-gold">NGÔI SAO MANG TÊN BOB</p><h2>Có những người bạn nhỏ,<br><span class="serif-italic">mình luôn nhớ.</span></h2><p>Trong giang hồ rộng lớn này, em dành riêng một góc thật ấm cho Bob — chú pug từng là một phần trong câu chuyện của anh.</p><p>Không cần điều gì quá lớn lao. Chỉ cần những kỷ niệm nhỏ cũng đủ làm một thế giới trở nên đặc biệt.</p><div class="memory-quote"><span class="memory-heart">♡</span><span>“Đã từng có một chú pug tên Bob.”</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="interlude" aria-label="Lời nhắn nhỏ"><div class="interlude-overlay"><span>✦</span><p id="favorite-quote">Giữa muôn vạn thế giới, em vẫn muốn cùng anh đi thêm thật nhiều chặng đường.</p><span class="interlude-rule"></span></div></section>
+
+    <section id="letter" class="letter-section section-pad"><div class="content-width"><div class="chapter-label"><span>04</span><span class="label-bar"></span><span>MẬT THƯ CUỐI HÀNH TRÌNH</span></div><div class="letter-intro"><p class="tiny-gold">KHÔNG CẦN HOÀN THÀNH NHIỆM VỤ MỚI ĐƯỢC ĐỌC</p><h2>Và đây là điều<br><span class="serif-italic">em thật sự muốn nói.</span></h2><p>Không phải bí kíp võ công, cũng chẳng phải một phần thưởng hiếm. Chỉ là vài lời của em, dành riêng cho anh.</p></div>
+      <div class="letter-stage"><div class="envelope" id="envelope"><div class="envelope-flap" aria-hidden="true"></div><div class="envelope-center"><span class="envelope-topline">TẤM THƯ THỨ NHẤT</span><span class="envelope-ornament">✧</span><span class="envelope-to">Gửi anh <span id="envelope-name">Công</span></span><span class="envelope-sub">một chút thương yêu từ em</span><button type="button" id="open-letter" class="letter-open-btn" aria-expanded="false" aria-controls="letter-paper"><span class="wax-seal">♡</span><span>CHẠM ĐỂ MỞ THƯ</span><span>↗</span></button></div></div>
+      <article class="letter-paper" id="letter-paper" hidden><div class="paper-top"><span>✦ MẬT THƯ TỪ TRÁI TIM</span><span id="letter-date">MỘT NGÀY ĐẶC BIỆT</span></div><h3 id="letter-title">Gửi anh, người em thương</h3><div class="letter-paragraphs" id="letter-paragraphs"></div><div class="letter-signature"><span>Thương anh,</span><strong id="letter-sender">Em ♡</strong></div><div class="letter-actions"><button type="button" class="btn btn-outline" id="replay-confetti">Rắc thêm chút phép màu ✧</button><button type="button" class="btn btn-quiet" id="close-letter">Gấp thư lại</button></div></article></div>
+      <div class="letter-ending"><span>✦</span><p>Chúc tuổi mới của anh thật rực rỡ, theo cách anh thích nhất.</p></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner content-width"><a href="#top" class="footer-logo">✦ HẮC HẢI KÝ SỰ</a><span>MADE WITH ♡, JUST FOR <span id="footer-name">CÔNG</span></span><button type="button" id="reset-game">Chơi lại từ đầu ↺</button></div><div class="footer-decoration" aria-hidden="true">✧ · · ✦ · · ✧</div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <canvas class="confetti-layer" id="confetti-canvas" aria-hidden="true"></canvas>
+</body>
+</html>
